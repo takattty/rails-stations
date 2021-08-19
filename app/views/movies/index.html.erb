@@ -1,0 +1,7 @@
+<% @movies.each do |movie| %>
+  <div>
+    <%= image_tag "https://picsum.photos/id/1012/200/300" %>
+    <%= movie.name %>
+    <%= link_to "予約/詳細", profile_path(movie.id)%>
+  </div>
+<% end %>
