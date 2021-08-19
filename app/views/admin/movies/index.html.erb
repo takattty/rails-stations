@@ -1,9 +1,9 @@
 <table>
   <tr>
     <th>ID</th>
-    <th>映画タイトル</th>
+    <th>タイトル</th>
     <th>公開年</th>
-    <th>上映中か</th>
+    <th>上映中</th>
     <th>概要</th>
     <th>画像URL</th>
     <th>作成日時</th>
@@ -17,7 +17,7 @@
     <td><%= movie["year"] %></td>
     <td><%= movie["is_showing"] == 1 ? "上映中" : "上映予定" %></td>
     <td><%= movie["description"] %></td>
-    <td><%= link_to "画像", movie["image_url"] %></td>
+    <td><%= link_to image_tag(movie["image_url"]) %></td>
     <td><%= movie["created_at"] %></td>
     <td><%= movie["updated_at"] %></td>
   </tr>
